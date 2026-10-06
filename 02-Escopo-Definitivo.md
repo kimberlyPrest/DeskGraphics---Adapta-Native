@@ -1,18 +1,20 @@
-# DeskGraphics — Escopo Definitivo v1.0
+# DeskGraphics — Escopo Definitivo v1.1
 ## Central de Inteligência Comercial On-Time
 
 **Cliente:** Deskgraphics Realize Tecnologia (Rio de Janeiro, ~60 funcionários, parceira Autodesk, segmento AECO)
 **Consultora técnica:** Kim · **Gerente:** Erik
-**Versão:** 1.0 — APROVADO (consultora + cliente/CSM em 06/10/2026)
+**Versão:** 1.1 — Emenda 01/2026 (06/10): Fase 1 reescopada para fundação + interface sem integrações; integrações e baseline → Fase 2. APROVADO (consultora + cliente/CSM em 06/10/2026)
 **Fontes:** 1ª Consultoria 17/09 (tl;dv `6aac1c86d1e2410013ab3ab4`), briefing oficial `desk.pdf`, análise crítica 17/09, escopo base 14/09
 
 ---
 
 ## 0. Como ler este documento
 
-Este é o contrato executável do projeto. As seções 1–3 fixam objetivo e métricas; 4–7 descrevem recorte, atores, fluxo e arquitetura; 8–9 definem fases e gates; 10–12 registram decisões, riscos e a cláusula de salvamento. O Anexo A traz as perguntas de validação discutidas na 2ª consultoria (06/10) — as respostas geram emendas registradas neste documento.
+Este é o contrato executável do projeto. As seções 1–3 fixam objetivo e métricas; 4–7 descrevem recorte, atores, fluxo e arquitetura; 8–9 definem fases e gates; 10–12 registram decisões, riscos e a cláusula de salvamento. O Anexo A traz as perguntas de validação da 2ª consultoria (06/10) — **as respostas geram emendas na v1.2**.
 
 Status: **APROVADO** — consultora + cliente/CSM em 06/10/2026.
+
+**Emenda 01/2026 (06/10):** a Fase 1 foi redefinida para NÃO depender de integrações — fundação de dados + interface (login, sidebar, design moderno, dashboards sobre fixture). Credenciais, ingestões, baseline e dados reais movidos para a Fase 2.
 
 ---
 
@@ -151,20 +153,20 @@ Palavra do cliente na 1ª consultoria (Flávio): *"capturar todos os dados que e
 
 ## 8. Fases
 
-### Fase 1 — Fundação e baseline (2–3 semanas)
+### Fase 1 — Fundação e Interface, sem integrações (2–3 semanas) — Emenda 01
+- [ ] Modelo de dados central + fixture sintética carregando
+- [ ] App Shell: sidebar, topbar, design moderno, rotas protegidas
+- [ ] Dashboard v1: funil e campanhas com dados sintéticos (banner "dados de demonstração")
+- [ ] LGPD: base legal, opt-out, política de dados (GATE-05)
+- [ ] Distribuição das 5 licenças Skip (GATE-06)
+
+### Fase 2 — Integrações e Baseline (2 semanas) — destravada por GATE-01
 - [ ] Credenciais das 6 APIs entregues e testadas (GATE-01)
 - [ ] Extração e congelamento do baseline de 90 dias (GATE-02)
 - [ ] Definição operacional de SQL homologada (GATE-03)
 - [ ] Defasagem do dashboard definida (GATE-04)
-- [ ] LGPD: base legal, opt-out, política de dados (GATE-05)
-- [ ] Dashboard v1: leads, origem, campanha, estágio, conversão por etapa
-- [ ] Distribuição das 5 licenças Skip (GATE-06)
-
-### Fase 2 — Dashboards on-time (2 semanas)
-- [ ] Dashboard de campanhas on-time (Meta Ads): custo, CPA, conversão por campanha/peça
-- [ ] Visão completa do funil on-time (HubSpot): estágios, tempo por etapa, gargalos
-- [ ] Lista diária de oportunidades para o SDR (critérios versionados)
-- [ ] Visibilidade das conversas de WhatsApp (nível de atendimento por pessoa)
+- [ ] Ingestões reais HubSpot + Meta Ads → modelo central
+- [ ] Dashboards v1 com dados reais (sem banner demo)
 
 ### Fase 3 — Workflows e cadências (3–4 semanas)
 - [ ] Primeiras 3 cadências aprovadas pelo Flávio (ex.: lead parado 3 dias; pós-treinamento; reativação de SQL fria)
@@ -189,9 +191,9 @@ Palavra do cliente na 1ª consultoria (Flávio): *"capturar todos os dados que e
 
 | Gate | O quê | Dono | Bloqueia |
 |------|-------|------|----------|
-| GATE-01 | Credenciais das 6 APIs (Meta, HubSpot, RD, WhatsApp, Read.ai, Vimeo) | Michel | F1 inteira |
+| GATE-01 | Credenciais das 6 APIs (Meta, HubSpot, RD, WhatsApp, Read.ai, Vimeo) | Michel | F2 inteira |
 | GATE-02 | Baseline 90d extraído e congelado | Kim + Flávio | Relatório de KPIs (F5) e qualquer otimização |
-| GATE-03 | Definição operacional de SQL | Flávio + José | F1 (dashboard) e K1–K3 |
+| GATE-03 | Definição operacional de SQL | Flávio + José | F2 e K1–K3 |
 | GATE-04 | Defasagem aceitável do dashboard on-time | Ronaldo | F2 |
 | GATE-05 | LGPD: base legal, opt-out, retenção | Kim + cliente | F3 (cadências) |
 | GATE-06 | 5 licenças Skip distribuídas | Ronaldo | Aculturamento (não bloqueia F1 técnica) |
@@ -210,6 +212,7 @@ Palavra do cliente na 1ª consultoria (Flávio): *"capturar todos os dados que e
 - **DEC-06** — Baseline-first: sem baseline congelado, nenhum KPI é reportado
 - **DEC-07** — K1–K3 (SQL→Venda) são os KPIs do contrato; o funil completo é infraestrutura (a confirmar na call)
 - **DEC-08** — LGPD como pré-condição de cadências, não como retrabalho posterior
+- **DEC-09** — Interface dark/glass moderna (referência AUROVIA): fundação e interface construídas na F1 sem depender de integração; ajustável à marca do cliente
 
 ---
 
@@ -217,7 +220,7 @@ Palavra do cliente na 1ª consultoria (Flávio): *"capturar todos os dados que e
 
 | Risco | Impacto | Mitigação |
 |-------|---------|-----------|
-| APIs não chegarem (Michel) | F1 inteira parada | Cobrar na call de hoje; definir prazo; sem API, F1 vira só definições/baseline manual |
+| APIs não chegarem (Michel) | F2 inteira parada | Cobrar na call; definir prazo; F1 (fundação + interface) NÃO depende e avança por completo |
 | Baseline de 90d não extraível do HubSpot | K1–K3 inverificáveis | GATE-02 antes de tudo; se HubSpot não exportar, reconstruir baseline de planilhas existentes |
 | "SQL" continuar indefinido | KPIs manipuláveis | GATE-03 com critério binário e auditável |
 | Huug/WhatsApp sem API utilizável | Sem visibilidade de conversas | Confirmar na call o que o Huug expõe; plano B: API oficial Meta |
@@ -228,9 +231,14 @@ Palavra do cliente na 1ª consultoria (Flávio): *"capturar todos os dados que e
 
 ## 12. Cláusula de salvamento
 
-Se qualquer premissa deste escopo se mostrar inviável (API indisponível, baseline inextrável, definição de SQL rejeitada), a fase afetada é reescopada em emenda registrada neste documento — o projeto não para: o que não depende do gate bloqueado continua (ex.: sem APIs, F1 avança com definições, baseline manual e desenho de dashboards).
+Se qualquer premissa deste escopo se mostrar inviável (API indisponível, baseline inextrável, definição de SQL rejeitada), a fase afetada é reescopada em emenda registrada neste documento — o projeto não para: o que não depende do gate bloqueado continua (ex.: sem APIs, a Fase 2 aguarda enquanto a Fase 1 — fundação e interface — avança por completo).
 
 ---
+
+## 13. Emendas
+
+### Emenda 01/2026 (06/10) — Fase 1 reescopada
+Decisão da Kim: a Fase 1 NÃO depende de integrações. F1 = fundação de dados (modelo central + fixture sintética) + interface completa (App Shell com sidebar, design moderno, dashboards v1 com dados sintéticos) + LGPD + licenças. Integrações (APIs), baseline de 90 dias, ingestões reais e dashboards com dados reais movidos para a Fase 2, destravada pelo GATE-01. Fases 3–5 inalteradas (renumeradas).
 
 ## Anexo A — Perguntas de validação para a 2ª consultoria (06/10, 17h)
 
@@ -246,3 +254,4 @@ Se qualquer premissa deste escopo se mostrar inviável (API indisponível, basel
 10. **Licenças Skip (GATE-06):** quem são os 5? (Ronaldo sugeriu: Antônio, José, Maria + 2; Prieto sugeriu alguém do back office)
 11. **Competição interna de aculturamento:** Ronaldo gostou da ideia — entra no plano como ação paralela da F1?
 12. **CREA/Autodesk:** a meta de outubro precisa de qual leitura do sistema? (dashboard de campanha basta?)
+13. **Design (DEC-09):** dark/glass moderno serve, ou há identidade visual da marca para seguir?
