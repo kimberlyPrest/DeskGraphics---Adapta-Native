@@ -2,7 +2,7 @@
 
 **Status:** Publicada (06/10/2026) — Emenda 01/2026 do escopo: F1 NÃO depende de APIs
 **Duração estimada:** 2–3 semanas
-**Objetivo:** fundação de dados (modelo central + fixture sintética) + interface completa (App Shell com sidebar, design moderno, dashboards v1 com dados sintéticos) + LGPD documentada + licenças distribuídas.
+**Objetivo:** fundação de dados (modelo central + fixture sintética) + interface completa (App Shell com login, sidebar, design moderno, dashboards v1 com dados sintéticos) + LGPD documentada + licenças distribuídas.
 
 ## Tasks
 
@@ -10,7 +10,7 @@
 |----|------|------|------|------|--------|--------------|
 | T1.1 | Fixture sintética de funil (leads, SQLs, campanhas, estágios) | 1-004 | A | Kim | ☐ | — |
 | T1.2 | Modelo de dados centralizado (leads/campanhas/estágios) | 1-004 | A | Kim | ☐ | — |
-| T1.3 | App Shell: sidebar, topbar, design moderno, rotas protegidas | 1-003 | B | Kim | ☐ | T1.2 |
+| T1.3 | App Shell: login, sidebar, topbar, design moderno, rotas protegidas | 1-003 | B | Kim | ☐ | T1.2 |
 | T1.4 | Dashboard v1: visão de funil (estágios, conversão por etapa) — dados sintéticos | 1-004 | C | Kim | ☐ | T1.1, T1.3 |
 | T1.5 | Dashboard v1: visão de campanhas (origem, custo, CPA) — dados sintéticos | 1-004 | C | Kim | ☐ | T1.1, T1.3 |
 | T1.6 | Lista de oportunidades (tela) com critérios versionados — dados sintéticos | 1-004 | D | Kim | ☐ | T1.4 |
@@ -19,7 +19,7 @@
 
 ## Critérios de saída da fase
 - [ ] Modelo + fixture carregando (CA-1-12/13)
-- [ ] App Shell no ar (CA-1-19..22)
+- [ ] App Shell no ar: login, sidebar, design moderno, rotas protegidas (CA-1-19..22)
 - [ ] Dashboards v1 com dados sintéticos (CA-1-16..18)
 - [ ] LGPD documentada (CA-1-27..30)
 - [ ] Licenças distribuídas (CA-1-31/32)

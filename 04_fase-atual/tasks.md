@@ -6,7 +6,7 @@
 |----|------|------|------|------|--------|--------------|
 | T1.1 | Fixture sintética de funil (leads, SQLs, campanhas, estágios) | 1-004 | A | Kim | ☐ | — |
 | T1.2 | Modelo de dados centralizado (leads/campanhas/estágios) | 1-004 | A | Kim | ☐ | — |
-| T1.3 | App Shell: sidebar, topbar, design moderno, rotas protegidas | 1-003 | B | Kim | ☐ | T1.2 |
+| T1.3 | App Shell: login, sidebar, topbar, design moderno, rotas protegidas | 1-003 | B | Kim | ☐ | T1.2 |
 | T1.4 | Dashboard v1: visão de funil (estágios, conversão por etapa) — dados sintéticos | 1-004 | C | Kim | ☐ | T1.1, T1.3 |
 | T1.5 | Dashboard v1: visão de campanhas (origem, custo, CPA) — dados sintéticos | 1-004 | C | Kim | ☐ | T1.1, T1.3 |
 | T1.6 | Lista de oportunidades (tela) com critérios versionados — dados sintéticos | 1-004 | D | Kim | ☐ | T1.4 |
