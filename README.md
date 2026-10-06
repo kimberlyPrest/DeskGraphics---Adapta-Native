@@ -8,13 +8,13 @@
 Centralização on-time do funil comercial (captura → SDR → SQL → pipeline → fechamento) com dashboards de campanhas e funil, cadências dentro do HubSpot, loops de valor e relatório trimestral Autodesk.
 
 ## Estrutura
-- `02-Escopo-Definitivo.md` — contrato executável do projeto (v1.1)
+- `02-Escopo-Definitivo.md` — contrato executável do projeto (v1.1, Emenda 01)
 - `01_projeto/` — visão e constituição
 - `02_reunioes/` — registro das reuniões
-- `03_documentos/` — documentos de apoio
-- `04_fase-atual/` — fase em execução (fase.md, SPECs, matriz)
+- `03_documentos/` — documentos de apoio + `fase-2-referencia/` (SPECs de integração)
+- `04_fase-atual/` — fase em execução (fase.md, SPECs, matriz, tasks)
 - `05_entregas/` — fases arquivadas
 - `06_notas/` — notas e decisões do dia a dia
 
 ## Status
-Ver `STATUS.md`. Fase 1 (fundação + interface, sem integrações) publicada — leva A elegível agora; GATE-01 destrava a Fase 2.
+Ver `STATUS.md`. Fase 1 (Fundação e Interface) publicada — execução pode iniciar imediatamente (sem dependência de APIs); integrações e dados reais na Fase 2.
