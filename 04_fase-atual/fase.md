@@ -2,7 +2,7 @@
 
 **Status:** Publicada (06/10/2026) — Emenda 01/2026 do escopo: F1 NÃO depende de APIs
 **Duração estimada:** 2–3 semanas
-**Objetivo:** fundação de dados (modelo central + fixture sintética) + interface completa (App Shell with sidebar, design moderno, dashboards v1 com dados sintéticos) + LGPD documentada + licenças distribuídas.
+**Objetivo:** fundação de dados (modelo central + fixture sintética) + interface completa (App Shell com sidebar, design moderno, dashboards v1 com dados sintéticos) + LGPD documentada + licenças distribuídas.
 
 ## Tasks
 
@@ -20,7 +20,7 @@
 ## Critérios de saída da fase
 - [ ] Modelo + fixture carregando (CA-1-12/13)
 - [ ] App Shell no ar (CA-1-19..22)
-- [ ] Dashboards v1 with dados sintéticos (CA-1-16..18)
+- [ ] Dashboards v1 com dados sintéticos (CA-1-16..18)
 - [ ] LGPD documentada (CA-1-27..30)
 - [ ] Licenças distribuídas (CA-1-31/32)
 
