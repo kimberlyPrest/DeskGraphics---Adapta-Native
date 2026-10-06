@@ -1,42 +1,28 @@
-# Fase 1 — Fundação e Interface
+# Fase 1 — Fundação e Interface (sem integrações)
 
-**Status:** Publicada (06/10/2026, Emenda 01) — **SEM dependência de integrações**
+**Status:** Publicada (06/10/2026) — Emenda 01/2026 do escopo: F1 NÃO depende de APIs
 **Duração estimada:** 2–3 semanas
-**Objetivo:** fundação do sistema (modelo de dados, fixture sintética, auth/perfis) + interface completa (shell com sidebar, design system moderno, telas de funil/campanhas/leads) operando com dados sintéticos. Integrações e dados reais ficam na **Fase 2** (SPEC-1-006).
-
-**Decisão da Kim (06/10):** nada na Fase 1 depende de API ou credencial — o GATE-01 não bloqueia mais esta fase.
+**Objetivo:** fundação de dados (modelo central + fixture sintética) + interface completa (App Shell com sidebar, design moderno, dashboards v1 com dados sintéticos) + LGPD documentada + licenças distribuídas.
 
 ## Tasks
 
 | ID | Task | SPEC | Leva | Dono | Status | Dependências |
 |----|------|------|------|------|--------|--------------|
-| T1.1 | Fixture sintética de funil (leads, SQLs, campanhas, estágios, vendas/perdas) | 1-001 | A | Kim | ☐ | — |
-| T1.2 | Modelo de dados central (leads, histórico de estágios, vendas, perdas, campanhas) | 1-001 | A | Kim | ☐ | — |
-| T1.3 | Auth + perfis (login, papéis admin/gestor/sdr/leitor, proteção de rotas) | 1-001 | A | Kim | ☐ | — |
-| T1.4 | Design system (paleta, tipografia, componentes, dark mode) | 1-002 | B | Kim | ☐ | — |
-| T1.5 | Shell da aplicação: sidebar + topbar + navegação | 1-002 | B | Kim | ☐ | T1.4 |
-| T1.6 | Tela Dashboard Funil (estágios, conversão por etapa, tempo mediano) com fixture | 1-002 | C | Kim | ☐ | T1.2, T1.5 |
-| T1.7 | Tela Campanhas (origem, custo, CPA) com fixture | 1-002 | C | Kim | ☐ | T1.2, T1.5 |
-| T1.8 | Tela Leads (lista com busca e filtros por origem/estágio/campanha) | 1-002 | C | Kim | ☐ | T1.2, T1.5 |
-| T1.9 | Documento de definição operacional de SQL p/ homologação | 1-003 | B | Kim | ☐ | — |
-| T1.10 | Política LGPD: base legal, opt-out, retenção | 1-004 | B | Kim | ☐ | — |
-| T1.11 | Distribuição das 5 licenças Skip + plano de aculturamento | 1-005 | B | Ronaldo | ☐ | — |
-| T1.12 | Revisão de segurança da fundação (auth, segredos, PII) | 1-001 | D | Kim | ☐ | T1.3 |
-
-## Levas
-
-| Leva | Tasks | Elegível |
-|---|---|---|
-| A | T1.1, T1.2, T1.3 | agora |
-| B | T1.4, T1.5, T1.9, T1.10, T1.11 | agora (T1.5 após T1.4, sequência intra-leva) |
-| C | T1.6, T1.7, T1.8 | após levas A e B |
-| D | T1.12 | após T1.3 |
+| T1.1 | Fixture sintética de funil (leads, SQLs, campanhas, estágios) | 1-004 | A | Kim | ☐ | — |
+| T1.2 | Modelo de dados centralizado (leads/campanhas/estágios) | 1-004 | A | Kim | ☐ | — |
+| T1.3 | App Shell: sidebar, topbar, design moderno, rotas protegidas | 1-003 | B | Kim | ☐ | T1.2 |
+| T1.4 | Dashboard v1: visão de funil (estágios, conversão por etapa) — dados sintéticos | 1-004 | C | Kim | ☐ | T1.1, T1.3 |
+| T1.5 | Dashboard v1: visão de campanhas (origem, custo, CPA) — dados sintéticos | 1-004 | C | Kim | ☐ | T1.1, T1.3 |
+| T1.6 | Lista de oportunidades (tela) com critérios versionados — dados sintéticos | 1-004 | D | Kim | ☐ | T1.4 |
+| T1.7 | Política LGPD: base legal, opt-out, retenção | 1-005 | B | Kim | ☐ | — |
+| T1.8 | Distribuição das 5 licenças Skip + plano de aculturamento | 1-006 | B | Ronaldo | ☐ | — |
 
 ## Critérios de saída da fase
-- [ ] Sistema no ar com login, sidebar e 3 telas operando com fixture (CA-1-07..14)
-- [ ] Fundação revisada em segurança (CA-1-06)
-- [ ] Doc de SQL pronto p/ homologação (GATE-03)
-- [ ] LGPD documentada (CA-1-18..21)
-- [ ] Licenças distribuídas (GATE-06)
+- [ ] Modelo + fixture carregando (CA-1-12/13)
+- [ ] App Shell no ar (CA-1-19..22)
+- [ ] Dashboards v1 com dados sintéticos (CA-1-16..18)
+- [ ] LGPD documentada (CA-1-27..30)
+- [ ] Licenças distribuídas (CA-1-31/32)
 
-**Nota:** integrações (6 APIs), baseline real e dashboards com dados reais = **Fase 2** (SPEC-1-006, publicada como referência).
+## Integrações (movidas para a Fase 2 — Emenda 01)
+Testes de conectividade, baseline 90d, ingestões reais e dashboards com dados reais: ver fase-2 quando liberada.
