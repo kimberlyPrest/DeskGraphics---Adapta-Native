@@ -20,7 +20,7 @@
 ## Critérios de saída da fase
 - [ ] Modelo + fixture carregando (CA-1-12/13)
 - [ ] App Shell no ar (CA-1-19..22)
-- [ ] Dashboards v1 com dados sintéticos (CA-1-16..18)
+- [ ] Dashboards v1 com dados sintéticos (CA-1-23..26)
 - [ ] LGPD documentada (CA-1-27..30)
 - [ ] Licenças distribuídas (CA-1-31/32)
 
