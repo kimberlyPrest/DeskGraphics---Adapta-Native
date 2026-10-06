@@ -4,7 +4,7 @@
 **Cliente:** Deskgraphics Realize Tecnologia (Rio de Janeiro, ~60 funcionários, parceira Autodesk, segmento AECO)
 **Consultora técnica:** Kim · **Gerente:** Erik
 **Versão:** 1.0 — APROVADO (consultora + cliente/CSM em 06/10/2026)
-**Fontes:** 1ª Consultoria 17/09 (tl;dv `6aac1c86d1e64...`), briefing oficial `desk.pdf`, análise crítica 17/09, escopo base 14/09
+**Fontes:** 1ª Consultoria 17/09 (tl;dv `6aac1c86d1e2410013ab3ab4`), briefing oficial `desk.pdf`, análise crítica 17/09, escopo base 14/09
 
 ---
 
@@ -56,7 +56,7 @@ Palavra do cliente na 1ª consultoria (Flávio): *"capturar todos os dados que e
 
 ### 3.1 Entra
 - Funil comercial completo: captura → qualificação (SDR) → SQL → pipeline comercial → fechamento/perda
-- Inteligência de campanhas (Meta Ads) with dashboard on-time
+- Inteligência de campanhas (Meta Ads) com dashboard on-time
 - Workflows/cadências **dentro do HubSpot** (e-mail, WhatsApp, nutrição no pipeline comercial)
 - Visibilidade das conversas de WhatsApp (nível de atendimento por SDR/vendedor/closer)
 - Análise de calls (Read.ai) e participação em treinamentos (Vimeo/DeskHub → campo no HubSpot)
@@ -69,7 +69,7 @@ Palavra do cliente na 1ª consultoria (Flávio): *"capturar todos os dados que e
 - **PMO Vision** (contratos de serviço) e **Partner Center** (licenças): futuro (Prieto)
 - Substituir HubSpot, RD Station ou qualquer ferramenta atual
 - Agente de IA autônomo em contato com cliente (IA sempre assistiva, humano no loop)
-- Geração de demanda (novas campanhas/criativos) — escopo of marketing, não de sistema
+- Geração de demanda (novas campanhas/criativos) — escopo de marketing, não de sistema
 - CRIA parceria com Autodesk (campanha em andamento, meta de outubro) — o sistema **mede**, não executa
 
 ---
@@ -136,7 +136,7 @@ Palavra do cliente na 1ª consultoria (Flávio): *"capturar todos os dados que e
 
 ## 7. Regras de negócio (RNs)
 
-- **RN-01** — Nenhum dado pessoal sai do ecosystem sem base legal LGPD registrada (GATE-05)
+- **RN-01** — Nenhum dado pessoal sai do ecossistema sem base legal LGPD registrada (GATE-05)
 - **RN-02** — Toda cadência/workflow tem dono, critério de entrada, critério de saída e meta declarada
 - **RN-03** — Motivo de perda é obrigatório para mover oportunidade para "perdida" (sem motivo = bloqueado)
 - **RN-04** — SQL só é criada/mudança de estágio conforme critério homologado (GATE-03); ocultação no frontend não é prova
