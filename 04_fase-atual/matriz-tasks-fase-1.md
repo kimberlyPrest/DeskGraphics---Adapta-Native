@@ -17,6 +17,6 @@
 | C | T1.4, T1.5 | dependem de T1.1+T1.3 (levas anteriores) |
 | D | T1.6 | depende de T1.4 (leva anterior) |
 
-**Totais:** 17 CAs na F1 (+ 8 de referência da F2) · 8 tasks · 4 levas · 0 dependência intra-leva · 0 dependência de API.
+**Totais:** 32 CAs únicos · 8 tasks · 4 levas · 0 dependência intra-leva · 0 F1 task depends on API.
 
-**Movidos para a Fase 2 (Emenda 01):** CA-1-01..04 (APIs) e CA-1-05..08 (baseline) — referência em `03_documentos/fase-2-referencia/`. CA-1-09..11 não utilizados (definição de SQL agora em SPEC-1-003, CA-1-15..17).
+**Movidos para a Fase 2 (Emenda 01):** CA-1-01..04 (APIs, SPEC-1-001), CA-1-05..08 (baseline, SPEC-1-002), CA-1-09..11 (definição de SQL — SPEC a detalhar na F2, GATE-03).
