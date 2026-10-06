@@ -1,0 +1,28 @@
+# SPEC-F2-001 — Conectividade e Contratos das APIs (referência Fase 2)
+
+**Fase:** 2 (movida pela Emenda 01/2026 — NÃO faz parte da Fase 1) · **CAs:** CA-1-01..04
+
+## Objetivo
+Provar que as 6 integrações (Meta Ads, HubSpot, RD Station, WhatsApp/Huug, Read.ai, Vimeo) respondem com as credenciais entregues, e documentar o contrato real de cada uma (endpoints, rate limits, campos disponíveis).
+
+## Escopo
+- Para cada API: teste de autenticação, 1 chamada de leitura real, registro do contrato (endpoint, campos, rate limit, paginação)
+- Documento `03_documentos/contratos-apis.md` com os 6 contratos
+- Falha de qualquer API = registro do erro exato + plano B (ex.: WhatsApp oficial vs Huug)
+
+## Critérios de aceite
+- **CA-1-01** — Meta Ads: leitura de campanhas da conta real retorna dados (ou erro documentado com causa)
+- **CA-1-02** — HubSpot: leitura de deals/pipeline retorna dados; campos de origem/campanha identificados
+- **CA-1-03** — RD Station: automação RD→HubSpot confirmada por evidência (lead de teste visível nos dois lados)
+- **CA-1-04** — WhatsApp/Huug, Read.ai e Vimeo: status de cada API documentado (disponível / indisponível + motivo)
+
+## TDD
+- **RED:** script de teste de conectividade roda e falha sem credenciais (erro explícito por API)
+- **GREEN:** com credenciais, script roda e produz o relatório de contratos
+- **REGRESSÃO:** re-execução idempotente não duplica registros
+
+## Dependências
+- **GATE-01** (Michel entrega as credenciais) — destrava a Fase 2
+
+## Nota
+Documento de REFERÊNCIA da Fase 2. As SPECs oficiais da F2 serão geradas na liberação da fase.

@@ -1,0 +1,28 @@
+# SPEC-F2-002 — Baseline de 90 Dias Congelado (referência Fase 2)
+
+**Fase:** 2 (movida pela Emenda 01/2026 — NÃO faz parte da Fase 1) · **CAs:** CA-1-05..08
+
+## Objetivo
+Extrair do HubSpot o histórico de 90 dias do funil (leads, SQLs, vendas, valores, motivos de perda) e congelá-lo como baseline oficial dos KPIs K1–K3.
+
+## Escopo
+- Extração via API HubSpot: deals com data de criação/fechamento, estágio, valor, motivo de perda, origem
+- Documento de baseline: números oficiais de K1 (conversão SQL→Venda), K2 (ciclo mediano), K3 (receita/SQL) + volumetria
+- Congelamento: arquivo versionado + assinatura (Kim + Flávio); alterações posteriores só por emenda
+
+## Critérios de aceite
+- **CA-1-05** — Extração cobre 100% dos deals criados nos 90 dias (contagem bate com o HubSpot)
+- **CA-1-06** — Documento de baseline com K1/K2/K3 calculados e volumetria (leads/dia, SQLs/dia, vendas/mês)
+- **CA-1-07** — Baseline assinado por Kim + Flávio antes de qualquer mudança de processo
+- **CA-1-08** — Re-execução da extração produz os mesmos números (idempotência)
+
+## TDD
+- **RED:** cálculo de K1/K2/K3 sobre fixture com resultado conhecido
+- **GREEN:** cálculo sobre extração real reproduz os números do documento
+- **REGRESSÃO:** re-extração não altera o congelado
+
+## Dependências
+- **GATE-01** (credenciais) · **GATE-02** (assinatura do congelamento) — ambos na Fase 2
+
+## Nota
+Documento de REFERÊNCIA da Fase 2. As SPECs oficiais da F2 serão geradas na liberação da fase.

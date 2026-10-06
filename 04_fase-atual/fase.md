@@ -20,9 +20,9 @@
 ## Critérios de saída da fase
 - [ ] Modelo + fixture carregando (CA-1-12/13)
 - [ ] App Shell no ar (CA-1-19..22)
-- [ ] Dashboards v1 com dados sintéticos (CA-1-23..26)
+- [ ] Dashboards v1 com dados sintéticos (CA-1-16..18)
 - [ ] LGPD documentada (CA-1-27..30)
 - [ ] Licenças distribuídas (CA-1-31/32)
 
 ## Integrações (movidas para a Fase 2 — Emenda 01)
-Testes de conectividade, baseline 90d, ingestões reais e dashboards com dados reais: ver fase-2 quando liberada.
+Testes de conectividade, baseline 90d, ingestões reais e dashboards com dados reais. Referência em `03_documentos/fase-2-referencia/` (SPEC-F2-001 APIs, SPEC-F2-002 baseline); as SPECs oficiais da F2 serão geradas na liberação da fase.
