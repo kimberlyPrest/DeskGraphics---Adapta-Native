@@ -4,13 +4,13 @@
 **Cliente:** Deskgraphics Realize Tecnologia (Rio de Janeiro, ~60 funcionários, parceira Autodesk, segmento AECO)
 **Consultora técnica:** Kim · **Gerente:** Erik
 **Versão:** 1.0 — APROVADO (consultora + cliente/CSM em 06/10/2026)
-**Fontes:** 1ª Consultoria 17/09 (tl;dv `6aac1c86d1e2410013ab3ab4`), briefing oficial `desk.pdf`, análise crítica 17/09, escopo base 14/09
+**Fontes:** 1ª Consultoria 17/09 (tl;dv `6aac1c86d1e64...`), briefing oficial `desk.pdf`, análise crítica 17/09, escopo base 14/09
 
 ---
 
 ## 0. Como ler este documento
 
-Este é o contrato executável do projeto. As seções 1–3 fixam objetivo e métricas; 4–7 descrevem recorte, atores, fluxo e arquitetura; 8–9 definem fases e gates; 10–12 registram decisões, riscos e a cláusula de salvamento. O Anexo A traz as perguntas de validação da 2ª consultoria (06/10) — **as respostas geram emendas na v1.1**.
+Este é o contrato executável do projeto. As seções 1–3 fixam objetivo e métricas; 4–7 descrevem recorte, atores, fluxo e arquitetura; 8–9 definem fases e gates; 10–12 registram decisões, riscos e a cláusula de salvamento. O Anexo A traz as perguntas de validação discutidas na 2ª consultoria (06/10) — as respostas geram emendas registradas neste documento.
 
 Status: **APROVADO** — consultora + cliente/CSM em 06/10/2026.
 
@@ -56,7 +56,7 @@ Palavra do cliente na 1ª consultoria (Flávio): *"capturar todos os dados que e
 
 ### 3.1 Entra
 - Funil comercial completo: captura → qualificação (SDR) → SQL → pipeline comercial → fechamento/perda
-- Inteligência de campanhas (Meta Ads) com dashboard on-time
+- Inteligência de campanhas (Meta Ads) with dashboard on-time
 - Workflows/cadências **dentro do HubSpot** (e-mail, WhatsApp, nutrição no pipeline comercial)
 - Visibilidade das conversas de WhatsApp (nível de atendimento por SDR/vendedor/closer)
 - Análise de calls (Read.ai) e participação em treinamentos (Vimeo/DeskHub → campo no HubSpot)
@@ -69,7 +69,7 @@ Palavra do cliente na 1ª consultoria (Flávio): *"capturar todos os dados que e
 - **PMO Vision** (contratos de serviço) e **Partner Center** (licenças): futuro (Prieto)
 - Substituir HubSpot, RD Station ou qualquer ferramenta atual
 - Agente de IA autônomo em contato com cliente (IA sempre assistiva, humano no loop)
-- Geração de demanda (novas campanhas/criativos) — escopo de marketing, não de sistema
+- Geração de demanda (novas campanhas/criativos) — escopo of marketing, não de sistema
 - CRIA parceria com Autodesk (campanha em andamento, meta de outubro) — o sistema **mede**, não executa
 
 ---
@@ -136,10 +136,10 @@ Palavra do cliente na 1ª consultoria (Flávio): *"capturar todos os dados que e
 
 ## 7. Regras de negócio (RNs)
 
-- **RN-01** — Nenhum dado pessoal sai do ecossistema sem base legal LGPD registrada (GATE-05)
+- **RN-01** — Nenhum dado pessoal sai do ecosystem sem base legal LGPD registrada (GATE-05)
 - **RN-02** — Toda cadência/workflow tem dono, critério de entrada, critério de saída e meta declarada
 - **RN-03** — Motivo de perda é obrigatório para mover oportunidade para "perdida" (sem motivo = bloqueado)
-- **RN-04** — SQL só é criada/mudada de estágio conforme critério homologado (GATE-03); ocultação no frontend não é prova
+- **RN-04** — SQL só é criada/mudança de estágio conforme critério homologado (GATE-03); ocultação no frontend não é prova
 - **RN-05** — Dashboard on-time = defasagem máxima definida no GATE-04 (proposta: 24h para campanhas, 1h para funil)
 - **RN-06** — Relatório Autodesk usa exclusivamente a fonte centralizada (nada de montagem manual paralela)
 - **RN-07** — Baseline de 90 dias é congelado ANTES de qualquer mudança de processo (GATE-02); sem baseline, nenhum KPI é reportado
@@ -232,7 +232,7 @@ Se qualquer premissa deste escopo se mostrar inviável (API indisponível, basel
 
 ---
 
-## Anexo A — Perguntas de validação para a call de hoje (06/10, 17h)
+## Anexo A — Perguntas de validação para a 2ª consultoria (06/10, 17h)
 
 1. **SQL (D3/GATE-03):** o que exatamente transforma um lead em SQL? Critério binário — quem decide: Flávio, José ou o SDR?
 2. **Baseline (D2/GATE-02):** confirmar os 90 dias e quem extrai do HubSpot (precisa de acesso admin).
